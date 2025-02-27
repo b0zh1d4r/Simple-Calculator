@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+
 body {
   background: #f4f4f4;
 }
@@ -59,6 +61,7 @@ form .display input {
   font-size: 40px;
   padding: 5px 10px;
   background: darkgray;
+  font-family: 'Calculator', sans-serif;
 }
 
 form input[type="button"]:active {
