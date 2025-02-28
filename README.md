@@ -1,4 +1,4 @@
-# Angular-Exam-Project-Octomber-2024
+# Simple-Calculator
 
 ## Project Setup and Start Guide
 
