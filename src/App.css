@@ -39,6 +39,7 @@ form input[type="button"] {
   box-shadow: 0 0.2em 0 0 #BBB;
   height: 60px;
   font-size: 16px;
+  color: black;
   margin: 4px;
   border-radius: 10px;
   font-weight: bolder;
@@ -68,3 +69,11 @@ form input[type="button"]:active {
   transform: translateY(2px);
   box-shadow: 0 0.1em 0 0 #999;
 }
+
+form input[type="button"].active {
+  transform: translateY(2px);
+  box-shadow: 0 0.1em 0 0 #999;
+  background: #bbb;
+}
+
+

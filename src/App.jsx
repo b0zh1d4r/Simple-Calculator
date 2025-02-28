@@ -6,10 +6,19 @@ function App() {
 
   useEffect(() => {
     const handleKeyPress = (event) => {
+      event.preventDefault();
       const key = event.key;
+      const button = document.querySelector(`input[value="${key}"]`);
+      
+      if (button) {
+        button.classList.add("active");
+        setTimeout(() => button.classList.remove("active"), 150);
+      }
+
       if (/^[0-9.+\-*/%]$/.test(key)) {
         setValue((prev) => prev + key);
-      } else if (key === 'Enter') {
+      } else if (key === 'Enter' || key === '=') {
+        if (value.trim() === '') return;
         try {
           setValue((prev) => eval(prev).toString());
         } catch {
@@ -21,19 +30,19 @@ function App() {
         setValue('');
       }
     };
-
+  
     window.addEventListener('keydown', handleKeyPress);
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [value]);
 
   return (
     <div className="container">
       <div className="calculator">
         <form>
           <div className="display">
-            <input type="text" value={value} readOnly />
+            <input type="text" value={value} readOnly/>
           </div>
           <div>
             <input type="button" value="AC" onClick={() => setValue('')} />
