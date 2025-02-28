@@ -26,7 +26,7 @@ A lightweight and interactive calculator built with React and JSX for basic arit
    ```sh
    npm run dev
 
-## 📌 Usage:
+## 🧮 Usage:
 
 1. Open the app in your browser at http://localhost:5173.
 
